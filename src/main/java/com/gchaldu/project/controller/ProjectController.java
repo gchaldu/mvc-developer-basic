@@ -7,6 +7,7 @@ import com.gchaldu.project.model.Project;
 import com.gchaldu.project.model.ProjectRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ProjectController {
     private final ProjectRepository projectRepository;
@@ -16,7 +17,10 @@ public class ProjectController {
     }
 
     public void addProject(String id, String name, String description) throws ProjectException, ProjectNotFoundException {
-        validateProjectData(id,name,description);
+        //validateProjectData(id,name,description);
+        validateString(id, "El id no puede ser nulo o estar vacío");
+        validateString(name, "El nombre no puede estar vacío");
+        validateString(description, "La descripción no puede estar vacía");
         Project project = FactoryProject.createProject(id,name,description);
         projectRepository.save(project);
     }
@@ -45,5 +49,16 @@ public class ProjectController {
 
     public ProjectRepository getProjectRepository() {
         return projectRepository;
+    }
+
+    public void validateString( String input, String message) throws ProjectException {
+        if(input == null || input.isEmpty()){
+            throw new ProjectException(message);
+        }
+    }
+
+    public Optional<Project> findById(String id) throws ProjectException {
+        validateString(id, "El id no puede ser nulo o estar vacío");
+        return projectRepository.findById(id);
     }
 }

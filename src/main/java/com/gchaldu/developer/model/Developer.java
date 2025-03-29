@@ -10,10 +10,11 @@ public class Developer {
     private Integer age;
     private Project project;
 
-    public Developer(String name, String id, Integer age) {
+    public Developer(String name, String id, Integer age, Project project) {
         this.name = name;
         this.id = id;
         this.age = age;
+        this.project = project;
     }
 
     public String getName() {
@@ -38,6 +39,14 @@ public class Developer {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
     }
 
     @Override
