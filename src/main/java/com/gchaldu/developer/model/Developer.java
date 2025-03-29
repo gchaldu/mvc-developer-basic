@@ -1,4 +1,6 @@
-package org.example.developer.model;
+package com.gchaldu.developer.model;
+
+import com.gchaldu.project.model.Project;
 
 import java.util.Objects;
 
@@ -6,6 +8,7 @@ public class Developer {
     private String name;
     private String id;
     private Integer age;
+    private Project project;
 
     public Developer(String name, String id, Integer age) {
         this.name = name;

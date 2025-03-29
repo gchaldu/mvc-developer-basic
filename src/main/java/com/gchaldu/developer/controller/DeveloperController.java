@@ -1,9 +1,10 @@
-package org.example.developer.controller;
+package com.gchaldu.developer.controller;
 
-import org.example.developer.exceptions.DeveloperException;
-import org.example.developer.exceptions.DeveloperNotFoundException;
-import org.example.developer.model.Developer;
-import org.example.developer.model.DeveloperRepository;
+import com.gchaldu.developer.exceptions.DeveloperException;
+import com.gchaldu.developer.exceptions.DeveloperNotFoundException;
+import com.gchaldu.developer.model.Developer;
+import com.gchaldu.developer.model.DeveloperRepository;
+import com.gchaldu.developer.view.DeveloperView;
 
 import java.util.List;
 

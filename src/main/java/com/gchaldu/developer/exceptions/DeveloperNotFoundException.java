@@ -1,4 +1,4 @@
-package org.example.developer.exceptions;
+package com.gchaldu.developer.exceptions;
 
 public class DeveloperNotFoundException extends Exception {
     public DeveloperNotFoundException(String message) {

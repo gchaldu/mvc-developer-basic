@@ -1,13 +1,13 @@
-package org.example.developer.model;
+package com.gchaldu.developer.model;
 
-import org.example.developer.exceptions.DeveloperException;
-import org.example.developer.exceptions.DeveloperNotFoundException;
+import com.gchaldu.developer.exceptions.DeveloperException;
+import com.gchaldu.developer.exceptions.DeveloperNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DeveloperRepository {
-    List<Developer> developers = new ArrayList<>();
+    private final List<Developer> developers = new ArrayList<>();
 
     public void save(Developer developer) throws DeveloperNotFoundException {
         if(developers.contains(developer)){
