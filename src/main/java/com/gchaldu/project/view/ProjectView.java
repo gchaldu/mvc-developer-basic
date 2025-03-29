@@ -19,10 +19,10 @@ public class ProjectView {
     public void showMenu(){
         String option;
         while (true){
-            System.out.println("1. Agregar Proyecto");
-            System.out.println("2. Agregar Proyecto");
-            System.out.println("3. salir");
-            System.out.println("Ingrese una opción");
+            System.out.println("\u0031\uFE0F\u20E3 Agregar Proyecto");
+            System.out.println("\u0032\uFE0F\u20E3 Agregar Proyecto");
+            System.out.println("\u0033\uFE0F\u20E3 salir");
+            System.out.println("\u1F522 Ingrese una opción");
             option = scanner.nextLine();
             switch (option){
                 case "1" -> addProject();
@@ -34,13 +34,13 @@ public class ProjectView {
 
     public void addProject() {
         try {
-            System.out.println("Ingrese el id del Proyecto");
+            System.out.println("\uD83C\uDD94 Ingrese el id del Proyecto");
             String id = scanner.nextLine();
 
-            System.out.println("Ingrese el nombre del Proyecto");
+            System.out.println("\uD83D\uDCC2 Ingrese el nombre del Proyecto");
             String name = scanner.nextLine();
 
-            System.out.println("Ingrese la descripción del Proyecto");
+            System.out.println("\uD83D\uDCDD Ingrese la descripción del Proyecto");
             String description = scanner.nextLine();
 
             projectController.addProject(id,name,description);
@@ -53,9 +53,9 @@ public class ProjectView {
 
     private void addProjectView() {
         try {
-            String idProject = readNonEmptyString("Ingrese el ID del Proyecto:");
-            String nameProject = readNonEmptyString("Ingrese el nombre del Proyecto:");
-            String descriptionProject = readNonEmptyString("Ingrese la descripción del Proyecto:");
+            String idProject = readNonEmptyString("\uD83C\uDD94 Ingrese el ID del Proyecto:");
+            String nameProject = readNonEmptyString("\uD83D\uDCC2 Ingrese el nombre del Proyecto:");
+            String descriptionProject = readNonEmptyString("\uD83D\uDCDD Ingrese la descripción del Proyecto:");
 
             projectController.addProject(idProject, nameProject, descriptionProject);
             System.out.println("✅ Proyecto agregado con éxito.");
@@ -79,7 +79,7 @@ public class ProjectView {
     }
 
     public Project addOrFindProject() throws ProjectException, ProjectNotFoundException {
-        String idProject = readNonEmptyString("Ingrese el ID del Proyecto:");
+        String idProject = readNonEmptyString("\uD83C\uDD94 Ingrese el ID del Proyecto:");
         Optional<Project> project = projectController.findById(idProject);
 
         if (project.isPresent()) {
@@ -87,8 +87,8 @@ public class ProjectView {
             return project.get();
         } else {
             System.out.println("⚠️ Proyecto no encontrado. Ingrese los datos para crearlo.");
-            String nameProject = readNonEmptyString("Ingrese el nombre del Proyecto:");
-            String descriptionProject = readNonEmptyString("Ingrese la descripción del Proyecto:");
+            String nameProject = readNonEmptyString("\uD83D\uDCC2 Ingrese el nombre del Proyecto:");
+            String descriptionProject = readNonEmptyString("\uD83D\uDCDDIngrese la descripción del Proyecto:");
             projectController.addProject(idProject, nameProject, descriptionProject);
             return new Project(idProject, nameProject, descriptionProject);
         }

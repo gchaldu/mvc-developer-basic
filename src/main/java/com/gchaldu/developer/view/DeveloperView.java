@@ -29,9 +29,9 @@ public class DeveloperView {
     public void showMenu() {
         while (true) {
             System.out.println("\nSeleccione una opción:");
-            System.out.println("1. Agregar Desarrollador");
-            System.out.println("2. Mostrar Desarrolladores");
-            System.out.println("3. Salir");
+            System.out.println("\uu0031\uFE0F\u20E3 Agregar Desarrollador");
+            System.out.println("\uu0032\uFE0F\u20E3 Mostrar Desarrolladores");
+            System.out.println("\uu0033\uFE0F\u20E3 Salir");
             System.out.print("Opción: ");
 
             int option = readValidInteger();
@@ -49,9 +49,9 @@ public class DeveloperView {
     private void addDeveloperView() {
         try {
             //Datos del Developer
-            String name = readNonEmptyString("Ingrese el nombre del desarrollador:");
-            String id = readNonEmptyString("Ingrese el ID del desarrollador:");
-            int age = readValidInteger("Ingrese la edad del desarrollador (>=18):", 18);
+            String name = readNonEmptyString("👨‍💻 Ingrese el nombre del desarrollador:");
+            String id = readNonEmptyString("🆔 Ingrese el ID del desarrollador:");
+            int age = readValidInteger("🎂 Ingrese la edad del desarrollador (>=18):", 18);
 
             Project project = projectView.addOrFindProject();
 
@@ -72,11 +72,11 @@ public class DeveloperView {
             } else {
                 developers.forEach(developer -> {
                     System.out.println("\n🔹 Desarrollador:");
-                    System.out.println("Nombre: " + developer.getName());
-                    System.out.println("ID: " + developer.getId());
-                    System.out.println("Edad: " + developer.getAge());
-                    System.out.println("Proyecto: " + developer.getProject().getName());
-                    System.out.println("Descripción del proyecto: " + developer.getProject().getDescription());
+                    System.out.println("\uD83D\uDC68\u200D\uD83D\uDCBB : " + developer.getName());
+                    System.out.println("🆔: " + developer.getId());
+                    System.out.println("🎂: " + developer.getAge());
+                    System.out.println("📂 Proyecto: " + developer.getProject().getName());
+                    System.out.println("📝 Descripción del proyecto: " + developer.getProject().getDescription());
                     System.out.println("_________________________");
                 });
             }
@@ -119,7 +119,7 @@ public class DeveloperView {
 
     // Método sobrecargado para leer enteros sin restricciones
     private int readValidInteger() {
-        return readValidInteger("Ingrese un número:", Integer.MIN_VALUE);
+        return readValidInteger("\uD83D\uDD22 Ingrese un número:", Integer.MIN_VALUE);
     }
 }
 
