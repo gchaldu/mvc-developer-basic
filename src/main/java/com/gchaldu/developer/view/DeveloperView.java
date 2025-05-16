@@ -14,14 +14,12 @@ import java.util.Scanner;
 
 public class DeveloperView {
     private final DeveloperController developerController;
-    private final ProjectController projectController;
     private final ProjectView projectView;
     private final Scanner scanner;
 
-    public DeveloperView(DeveloperController developerController, ProjectController projectController,
+    public DeveloperView(DeveloperController developerController,
                          ProjectView projectView) {
         this.developerController = developerController;
-        this.projectController = projectController;
         this.projectView = projectView;
         this.scanner = new Scanner(System.in);
     }

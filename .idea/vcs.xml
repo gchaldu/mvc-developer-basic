@@ -2,6 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../../../../Programación 3/Clases/MVC/mvc-punto-entrada-controller/mvc-developer-basic" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../Programación 3/mvc-developer-basic" vcs="Git" />
   </component>
 </project>
